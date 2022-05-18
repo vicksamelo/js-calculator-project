@@ -1,44 +1,49 @@
-*,
-html {
-  padding: 0;
-  margin: 0;
-}
-
 body {
   background-image: radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
   color: #6cacc5;
-  font: 300 18px/1.6 'Source Sans Pro', sans-serif;
+  font: 300 18px 'Source Sans Pro', sans-serif;
   margin: 0;
-  padding: 5em 0 2em;
   text-align: center;
   height: 100%;
 }
 
 h1 {
   font-weight: 300;
-  margin: 0;
-  margin: 0 auto 3em auto;
+  margin-top: 50px;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  margin-top: 15px;
+button {
+  border: none;
+  border-radius: 16px;
+  background: rgba(42, 50, 113, 0.28);
+  color: #6cacc5;
+  cursor: pointer;
+  float: left;
+  font: inherit;
+  margin: 0.25em;
+  width: 2em;
+  height: 2em;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-footer a {
+button:hover {
+  background: #201e40;
+}
+
+.footer a {
   text-decoration: none;
   color: indigo;
 }
 
 .container {
-  height: 90vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -51,6 +56,7 @@ footer a {
 .calculator {
   font-size: 28px;
   margin: 0 auto;
+  padding: 0.15em;
   width: 10em;
   /* From https://css.glass */
   background: rgba(32, 30, 64, 0.12);
@@ -65,6 +71,7 @@ footer a {
 .viewer {
   color: #8c5059;
   line-height: 3em;
+  width: 6em;
   text-align: end;
   padding-right: 10px;
   margin-top: 14px;
@@ -91,31 +98,12 @@ footer a {
           align-items: baseline;
 }
 
-button {
-  border: none;
-  border-radius: 16px;
-  background: rgba(42, 50, 113, 0.28);
-  color: #6cacc5;
-  cursor: pointer;
-  float: left;
-  font: inherit;
-  margin: 0.25em;
-  width: 2em;
-  height: 2em;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-button:hover {
-  background: #201e40;
-}
-
 @media (min-width: 420px) {
   .calculator {
     width: 12em;
   }
   .viewer {
-    width: 8.5em;
+    width: 6em;
   }
   button {
     margin: 0.5em;

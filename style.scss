@@ -19,67 +19,18 @@ $bg-img: radial-gradient(
   border: 1px solid rgba(32, 30, 64, 0.34);
 }
 
-*,
-html {
-  padding: 0;
-  margin: 0;
-}
-
 body {
   background-image: $bg-img;
   color: $primary-color;
-  font: 300 18px/1.6 'Source Sans Pro', sans-serif;
+  font: 300 18px 'Source Sans Pro', sans-serif;
   margin: 0;
-  padding: 5em 0 2em;
   text-align: center;
   height: 100%;
 }
 
 h1 {
   font-weight: 300;
-  margin: 0;
-  margin: 0 auto 3em auto;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  margin-top: 15px;
-  a {
-    text-decoration: none;
-    color: indigo;
-  }
-}
-
-.container {
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.calculator {
-  font-size: 28px;
-  margin: 0 auto;
-  width: 10em;
-  @include glassmorphism;
-}
-
-.viewer {
-  color: $secondary-color;
-  line-height: 3em;
-  text-align: end;
-  padding-right: 10px;
-  margin-top: 14px;
-  margin-right: 14px;
-  @include glassmorphism();
-}
-
-.calc-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  margin-top: 50px;
 }
 
 button {
@@ -98,13 +49,54 @@ button {
 button:hover {
   background: #201e40;
 }
+
+.footer {
+  a {
+    text-decoration: none;
+    color: indigo;
+  }
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.calculator {
+  font-size: 28px;
+  margin: 0 auto;
+  padding: 0.15em;
+  width: 10em;
+  @include glassmorphism;
+}
+
+.viewer {
+  color: $secondary-color;
+  line-height: 3em;
+  width: 6em;
+  text-align: end;
+  padding-right: 10px;
+  margin-top: 14px;
+  margin-right: 14px;
+  @include glassmorphism();
+}
+
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 @media (min-width: 420px) {
   .calculator {
     width: 12em;
   }
 
   .viewer {
-    width: 8.5em;
+    width: 6em;
   }
 
   button {
