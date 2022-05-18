@@ -30,9 +30,8 @@ numArray.forEach((number) => {
       return;
     }
     //Atribui o numero clicado a variavel do primeiro numero
-    let secondNumber = parseInt(number.textContent);
+    secondNumber = parseInt(number.textContent);
     console.log(secondNumber);
-    console.log(currentOp);
 
     if (currentOp == '*') {
       result = firstNumber * secondNumber;
@@ -54,11 +53,7 @@ numArray.forEach((number) => {
 
 //Botão de limpar
 clear.addEventListener('click', () => {
-  result.textContent = 0;
-  viewer.textContent = result.textContent;
-  firstNumber.textContent = 0;
-  secondNumber.textContent = 0;
-  console.log(result.textContent);
-  console.log(firstNumber.textContent);
-  console.log(secondNumber.textContent);
+  viewer.textContent = 0;
+  firstNumber = undefined;
+  secondNumber = undefined;
 });
